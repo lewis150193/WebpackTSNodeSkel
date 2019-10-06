@@ -1,7 +1,4 @@
 {
-  "extends": [
-    "tslint:recommended"
-  ],
   "rules": {
     "only-arrow-functions": true,
     "no-trailing-whitespace": false

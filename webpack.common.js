@@ -10,6 +10,10 @@ const path = require('path');
 
 module.exports = {
     mode: "development",
+    devServer: {
+            contentBase: './build',
+           hot: true,
+    },
     entry: [
         './app/app.ts',
         './app/assets/application.scss'
@@ -48,8 +52,8 @@ module.exports = {
                 test: /\.(sa|sc|c)ss$/,
                 loader: [
                     MiniCSSExtractPlugin.loader,
-                    "css-loader",
-                    "sass-loader"
+                    "css-loader", //2. Turns css into commonjs
+                    "sass-loader" //1. Turns sass into css
                 ]
             }
         ]
